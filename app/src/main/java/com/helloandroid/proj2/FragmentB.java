@@ -194,8 +194,8 @@ public class FragmentB extends Fragment {
                 jsonObject.accumulate("name", name);
                 jsonObject.accumulate("content", number);
                 jsonObject.accumulate("code", code);
-                Log.d(name, "namename");
-                Log.d(number, "numbernumber");
+                Log.d(name, "aaa");
+                Log.d(number, "aaa");
 
                 HttpURLConnection con = null;
                 BufferedReader reader = null;
@@ -304,6 +304,8 @@ public class FragmentB extends Fragment {
 
         adapter = new FragmentB.CallAdapter();
         ImageList imageList = gson.fromJson(response, ImageList.class);
+        Log.d(response, "asdfgh");
+
         for (int i=0; i < imageList.image.size(); i++) {
             ImageInfo imageInfo = imageList.image.get(i);
 

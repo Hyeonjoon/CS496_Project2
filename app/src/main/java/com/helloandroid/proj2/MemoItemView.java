@@ -36,13 +36,12 @@ public class MemoItemView extends LinearLayout {
         checkBox.setText(str);
     }
 
-    public String chCheck () {
+    public void chCheck () {
         if (checkBox.isChecked()) {
             check = "1";
         } else {
             check = "0";
         }
-        return check;
     }
 
 }
