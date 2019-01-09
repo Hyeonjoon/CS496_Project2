@@ -194,8 +194,8 @@ public class FragmentB extends Fragment {
                 jsonObject.accumulate("name", name);
                 jsonObject.accumulate("content", number);
                 jsonObject.accumulate("code", code);
-                Log.d(name, "aaa");
-                Log.d(number, "aaa");
+                Log.d(name, "namename");
+                Log.d(number, "numbernumber");
 
                 HttpURLConnection con = null;
                 BufferedReader reader = null;

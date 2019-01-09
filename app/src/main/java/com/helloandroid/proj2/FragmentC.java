@@ -53,8 +53,6 @@ public class FragmentC extends Fragment {
 
     String fmemo;
     String fcode;
-    String check = "0";
-    ArrayList<String> chch = new ArrayList<>();
     int fnum = 0;
     int user;
 
@@ -242,7 +240,6 @@ public class FragmentC extends Fragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) { //데이터 관리하는 어댑터가 화면에 보여질 각각의 아이템을 위한 뷰를 만듦 ->레이아웃으로 구성되어야
             MemoItemView view = null;
-            chch.set(position, view.chCheck());
 
             if (convertView == null) {
                 view = new MemoItemView(getContext());
@@ -252,6 +249,7 @@ public class FragmentC extends Fragment {
 
             MemoItem item = items.get(position);
             view.setMemo(item.getMemo());
+            view.chCheck();
 
             return view;
         }
@@ -291,15 +289,7 @@ public class FragmentC extends Fragment {
         memoCache = memoList;
         for (int i=0; i < memoList.todo.size(); i++) {
             MemoInfo memoInfo = memoList.todo.get(i);
-
-            if (chch.get(i) == "1") {
-                fmemo = memoInfo.content;
-                fnum = Integer.parseInt(memoInfo.number);
-                fcode = "2";
-                new FragmentC.JSONTask().execute("http://143.248.140.106:3780/posttodo?user=" + user);
-            } else {
-                adapter.addItem(new MemoItem(memoInfo.content, memoInfo.number));
-            }
+            adapter.addItem(new MemoItem(memoInfo.content, memoInfo.number));
         }
 
         listView.setAdapter(adapter);
