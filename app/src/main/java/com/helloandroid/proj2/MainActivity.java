@@ -95,12 +95,12 @@ public class MainActivity extends AppCompatActivity {
 
         bar = getSupportActionBar();
         bar.setDisplayShowTitleEnabled(true);
-        bar.setTitle("CHACHAGO");
+        bar.setTitle("DBDBDIP");
         bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         ActionBar.Tab tab1 = bar.newTab().setText("NUMBERS").setTabListener(tabListener);
-        ActionBar.Tab tab2 = bar.newTab().setText("IMAGE").setTabListener(tabListener);
-        ActionBar.Tab tab3 = bar.newTab().setText("SEARCH").setTabListener(tabListener);
+        ActionBar.Tab tab2 = bar.newTab().setText("GALLERY").setTabListener(tabListener);
+        ActionBar.Tab tab3 = bar.newTab().setText("TODOLIST").setTabListener(tabListener);
 
         bar.addTab(tab1);
         bar.addTab(tab2);
